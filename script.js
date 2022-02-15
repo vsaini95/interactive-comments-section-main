@@ -115,13 +115,11 @@ function ReplyFuncs(elem) {
 }
 
 function replyDiv() {
-  {
-    return `<div class="Comment">
+  return `<div class="Comment">
   <img src="images/avatars/image-juliusomo.png" alt="">
   <textarea placeholder="Comment Please!!" class="textArea"></textarea>
   <button class="SendNewBtn">Send</button>
 </div>`;
-  }
 }
 
 /*--------------------Voting-----------------------------------------------*/
