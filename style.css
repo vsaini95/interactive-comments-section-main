@@ -1,0 +1,406 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  border: 0;
+  margin: 0;
+  font-family: "Rubik", sans-serif;
+}
+body {
+  background-color: hsl(228, 33%, 97%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+.wrapper {
+  padding-top: 20px;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.section {
+  margin-bottom: 10px;
+  background-color: hsl(0, 0%, 100%);
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 0 1px 1px rgb(238, 237, 237);
+  display: flex;
+  padding: 20px;
+  position: relative;
+}
+.comment1 {
+  margin-top: 20px;
+}
+.vote {
+  display: flex;
+  flex-direction: column;
+  background-color: hsl(223, 19%, 93%);
+  padding: 10px 10px;
+  border-radius: 8px;
+  justify-content: center;
+  height: 100px;
+  width: 35px;
+}
+.vote .plus {
+  width: 15px;
+  padding-bottom: 20px;
+  cursor: pointer;
+}
+.vote .minus {
+  width: 15px;
+  padding-top: 20px;
+  cursor: pointer;
+}
+.vote .score {
+  color: hsl(238, 40%, 52%);
+  font-weight: 600;
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.top {
+  display: flex;
+  justify-content: space-between;
+}
+.identity {
+  display: flex;
+}
+.identity img {
+  width: 30px;
+  height: 30px;
+  margin: 0px 15px 0px 20px;
+}
+.identity .name {
+  font-weight: 600;
+  margin-right: 15px;
+}
+.identity .time {
+  color: hsl(211, 10%, 45%);
+}
+.identity .You {
+  background-color: hsl(238, 40%, 52%);
+  color: #fff;
+  margin-right: 10px;
+  border-radius: 3px;
+  font-size: 14px;
+  margin-bottom: 9px;
+  padding: 2px 5px;
+}
+.replyBtn {
+  display: flex;
+}
+.replyBtn img {
+  width: 15px;
+  height: 15px;
+  margin-right: 10px;
+}
+.replyBtn p {
+  color: hsl(238, 40%, 52%);
+  font-weight: 500;
+}
+.replyBtn .delete {
+  margin-right: 20px;
+  color: hsl(358, 79%, 66%);
+}
+.msg p {
+  padding: 10px 20px;
+  line-height: 1.5rem;
+  color: hsl(211, 10%, 45%);
+}
+.msg span {
+  color: hsl(238, 40%, 52%);
+  font-weight: 700;
+}
+.replies {
+  display: flex;
+  align-items: end;
+  flex-direction: column;
+  width: 100%;
+}
+.Comment {
+  height: 140px;
+  padding: 25px;
+  display: flex;
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 12px;
+  box-shadow: 0 0 1px 1px rgb(238, 237, 237);
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.Comment img {
+  width: 40px;
+  height: 40px;
+  margin-right: 20px;
+}
+.Comment textarea {
+  width: 78%;
+  border: 1px solid hsl(238, 40%, 52%);
+  border-radius: 12px;
+  margin-right: 20px;
+  padding: 10px;
+}
+.Comment button {
+  text-transform: uppercase;
+  background-color: hsl(238, 40%, 52%);
+  border: none;
+  color: #fff;
+  border-radius: 6px;
+  height: 38px;
+  padding: 10px 30px;
+}
+.Comment button:hover {
+  background-color: hsl(239, 57%, 85%);
+}
+.replyComment {
+  width: 100%;
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+.modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  visibility: hidden;
+}
+
+.modal-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 1rem 1.5rem;
+  width: 24rem;
+  border-radius: 0.5rem;
+}
+.modal-content p {
+  margin-top: 20px;
+  color: hsl(211, 10%, 45%);
+  line-height: 1.6rem;
+  margin-bottom: 16px;
+}
+.modal-content .no {
+  padding: 10px 30px;
+  color: #fff;
+  background-color: hsl(211, 10%, 45%);
+  margin-right: 20px;
+  border-radius: 6px;
+  text-transform: uppercase;
+}
+.modal-content .yes {
+  padding: 10px 30px;
+  color: #fff;
+  background-color: hsl(358, 79%, 66%);
+  border-radius: 6px;
+  text-transform: uppercase;
+}
+
+.modal-content .no:hover {
+  background-color: darkgray;
+}
+
+.show-modal {
+  opacity: 1;
+  visibility: visible;
+}
+/*.contentSide {
+  display: flex;
+  justify-content: end;
+  width: 90%;
+}*/
+.rapper {
+  width: 50%;
+}
+@media screen and (max-width: 1286px) {
+  .wrapper,
+  .rapper {
+    width: 65%;
+  }
+}
+@media screen and (max-width: 1025px) {
+  .wrapper,
+  .rapper {
+    width: 75%;
+  }
+}
+@media screen and (max-width: 769px) {
+  .wrapper,
+  .rapper {
+    width: 85%;
+  }
+}
+@media screen and (max-width: 675px) {
+  .wrapper,
+  .rapper {
+    width: 95%;
+  }
+  .section {
+    flex-direction: column-reverse;
+    position: relative;
+  }
+  .vote {
+    flex-direction: row;
+    width: 90px;
+    height: 35px;
+    padding: 9px;
+  }
+  .vote .plus {
+    width: 10px;
+    height: 10px;
+    padding-bottom: 0px;
+    transform: rotate(90deg);
+    margin-right: 13px;
+  }
+  .vote .minus {
+    width: 3px;
+    height: 10px;
+    padding-top: 0px;
+    margin-top: 2px;
+    transform: rotate(90deg);
+    margin-left: 13px;
+  }
+  .vote .score {
+    color: hsl(238, 40%, 52%);
+    font-weight: 600;
+    font-size: 14px;
+  }
+  .msg p {
+    padding: 10px 0px;
+    font-size: 16px;
+  }
+  .identity img {
+    margin: 0px 15px 0px 0px;
+  }
+  .replyBtn {
+    position: absolute;
+    bottom: 30px;
+    right: 20px;
+  }
+  .deleteBtn {
+    position: absolute;
+    bottom: 30px;
+    right: 20px;
+  }
+  .replyBtn img {
+    width: 10px;
+    height: 10px;
+    margin-right: 5px;
+    margin-top: 5px;
+  }
+  .Comment {
+    height: 200px;
+  }
+  .Comment button {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    height: 38px;
+    padding: 10px 30px;
+  }
+  .Comment img {
+    width: 30px;
+    height: 30px;
+    margin-right: 20px;
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+  }
+  .Comment textarea {
+    width: 100%;
+    height: 110px;
+    margin-right: 0px;
+  }
+  .modal-content {
+    width: 20rem;
+  }
+  .modal-content .no {
+    padding: 10px 20px;
+    margin-right: 10px;
+  }
+}
+.Reply {
+  margin-left: 6%;
+  width: 94%;
+}
+.sideDiv {
+  margin-left: 20px;
+  border-left: 1px solid hsl(223, 19%, 93%);
+}
+
+.deleteBtn {
+  display: flex;
+}
+.deleteBtn img {
+  width: 15px;
+  height: 15px;
+  margin-right: 10px;
+}
+.deleteBtn p {
+  color: hsl(238, 40%, 52%);
+  font-weight: 500;
+}
+.deleteBtn .delete {
+  margin-right: 20px;
+  color: hsl(358, 79%, 66%);
+}
+.hidden {
+  visibility: hidden;
+  position: absolute;
+}
+.Replycontent {
+  margin-left: 6%;
+  width: 94%;
+}
+.update {
+  margin-top: 20px;
+  display: flex;
+  justify-content: flex-end;
+}
+.updateBtn {
+  background-color: hsl(238, 40%, 52%);
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-transform: uppercase;
+}
+.updateBtn:hover {
+  background-color: hsl(239, 57%, 85%);
+}
+.editing {
+  border: 1px solid rgb(58, 58, 58);
+  border-radius: 5px;
+  margin-left: 20px;
+  margin-top: 10px;
+  height: 120px;
+}
+.msg div {
+  padding: 10px 20px;
+  line-height: 1.5rem;
+  color: hsl(211, 10%, 45%);
+}
+.spant {
+  color: hsl(238, 40%, 52%);
+  font-weight: 700;
+}
+.btn1 {
+  position: absolute;
+  visibility: hidden;
+}
+.btn2 {
+  position: absolute;
+  visibility: hidden;
+}
